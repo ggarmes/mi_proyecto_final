@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;1,300;1,700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Te Adopto</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -16,34 +16,41 @@
     <header>
         <img src="./images/logo.png" alt="Te Adopto Logo" id="img-logo">
         <ul>
-            <li><a class="optionMenu" href="./index.html">Inicio</a></li>
-            <li><a class="optionMenu" href="./pages/nosotros.html">Nosotros</a></li>
-            <li><a class="optionMenu" href="./pages/refugios.html">Refugios</a></li>
-            <li><a class="optionMenu" href="./pages/mascotas.html">Mascotas</a></li>
-            <li><a class="optionMenu" href="./pages/contacto.html">Contacto</a></li>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./pages/nosotros.html">Nosotros</a></li>
+            <li><a href="./pages/refugios.html">Refugios</a></li>
+            <li><a href="./pages/mascotas.html">Mascotas</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
     </header>
 
-    <!-- El contenido del home -->
+    <!-- El banner con la frase -->
+    <nav>
+        <h1>¡No compres uno de raza, adopta uno sin casa!</h1>
+    </nav>
+
+    <!-- El contenido del main -->
     <main>
         <img src="./images/perro-home.png" alt="" id="imgPerroIndex">
-        <div class="cuadroHome cuadroAdoptar"><p>¿QUIERES ADOPTAR?</p></div>
-        <div id="textoAdoptar">
-            <p class="textoIndex">La adopción es cada vez más común, pero todavía hay quienes se decantan por comprar un animal. Muchos esperan su oportunidad en un refugio. ¡Decídete!</p>
-        </div>
-        <div class="cuadroHome cuadroColaborar">¿QUIERES COLABORAR?</div>
-        <div id="textoColaborar">
-            <p class="textoIndex">Si te gusta lo que hacemos, apóyanos con una donación, para poder fortaleces nuestro proyecto y a quienes nos acompañan.</p>
-        </div>
-        <div class="cuadroHome cuadroVisitar">¿QUIERES VISITARNOS?</div>
-        <div id="textoVisitar">
-            <p class="textoIndex">Comparte una tarde en alguno de nuestros refugios aliados con nuestros huéspedes, y tal vez te enamores de alguno.</p>
-        </div>
+        <section id="indexSection">
+            <div class="cuadroHome">
+                <h2>¿QUIERES ADOPTAR?</h2>
+                <p class="textoIndex">La adopción es cada vez más común, pero todavía hay quienes se decantan por comprar un animal. Muchos esperan su oportunidad en un refugio. ¡Decídete!</p>
+            </div>
+            <div class="cuadroHome">
+                <h2>¿QUIERES COLABORAR?</h2>
+                <p class="textoIndex">Si te gusta lo que hacemos, apóyanos con una donación, para poder fortaleces nuestro proyecto y a quienes nos acompañan.</p>
+            </div>
+            <div class="cuadroHome">
+                <h2>¿QUIERES VISITARNOS?</h2>
+                <p class="textoIndex">Comparte una tarde en alguno de nuestros refugios aliados con nuestros huéspedes, y tal vez te enamores de alguno.</p>
+            </div>
+        </section>
     </main>
 
     <!-- Información del sitio, redes cociales, copyright-->
     <footer>
-        <a href="https://www.facebook.com/ggarmes" target="_blank"><img src="./images/facebook-icon.png" alt="Facebook Page" class="imgRedes"></a>
+        <a href="https://www.facebook.com/ggarmes" target="_blank"><img src="./images/facebook-icon.png" alt="Facebook Page""></a>
         <a href="https://www.instagram.com/ggarmes/" target="_blank"><img src="./images/instagram-icon.png" alt="Instagram Page"></a>
         <a href="https://api.whatsapp.com/send/?phone=5491124069740" target="_blank"><img src="./images/whatsapp-icon.png" alt="Whatsapp Page"></a>
     </footer>

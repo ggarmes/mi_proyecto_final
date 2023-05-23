@@ -14,39 +14,47 @@
 
     <!-- Header donde esta el logo del sitio y el menu de navegación-->
     <header>
-        <div id="logo">
-            <img src="../images/logo.png" alt="Te Adopto Logo" id="img-logo">
-        </div>
-        <div id="menu">
-            <ul>
-                <li><a class="optionMenu" href="../index.html">Inicio</a></li>
-                <li><a class="optionMenu" href="./nosotros.html">Nosotros</a></li>
-                <li><a class="optionMenu" href="./refugios.html">Refugios</a></li>
-                <li><a class="optionMenu" href="./mascotas.html">Mascotas</a></li>
-                <li><a class="optionMenu" href="./contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-
+        <img src="../images/logo.png" alt="Te Adopto Logo" id="img-logo">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/refugios.html">Refugios</a></li>
+            <li><a href="../pages/mascotas.html">Mascotas</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
     </header>
+
+    <!-- El banner con la frase -->
+    <nav>
+        <h1>¡No compres uno de raza, adopta uno sin casa!</h1>
+    </nav>
 
     <!-- El contenido de contacto y geolocalización-->
     <main>
+        <section id="contactoSection">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13139.644049160364!2d-58.42875065!3d-34.58111815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb591ad0daafb%3A0x78dc3edbbb79408d!2sFitz%20Roy%202224%2C%20C1425FVD%20CABA!5e0!3m2!1ses!2sar!4v1681675950821!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-            <h2>Escribenos tu consulta.</h2>
-            <form action="">
-                <p>Nombre y apellido: </p><input type="text" placeholder="Nombre y Apellido">
-                <p>Teléono:</p><input type="tel" placeholder="Teléfono">
-                <p>Correo electrónico</p><input type="email" placeholder="Correo Electrónico">
-                <p>Consulta</p><textarea name="" id="" cols="30" rows="10">Escriba su consulta</textarea>
-                <input type="button" value="Enviar consulta">
 
-            </form>
+            <div class="formulario-contacto">
+                <div>
+                    <h2>Escribenos tu consulta.</h2>
+                </div>
+                <div>
+                    <form action="">
+                        <p>Nombre y apellido: <input type="text" placeholder="Nombre y Apellido"></p>
+                        <p>Teléfono: <input type="tel" placeholder="Teléfono"></p>
+                        <p>Correo electrónico: <input type="email" placeholder="Correo Electrónico"></p>
+                        <p><textarea name="" id="" cols="30" rows="10">Escriba su consulta</textarea></p>
+                        <input type="submit" value="Enviar consulta">
+
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!---->
+    <!-- Información del sitio, redes cociales, copyright-->
     <footer>
-        <a href="https://www.facebook.com/ggarmes" target="_blank"><img src="../images/facebook-icon.png" alt="Facebook Page" class="imgRedes"></a>
+        <a href="https://www.facebook.com/ggarmes" target="_blank"><img src="../images/facebook-icon.png" alt="Facebook Page""></a>
         <a href="https://www.instagram.com/ggarmes/" target="_blank"><img src="../images/instagram-icon.png" alt="Instagram Page"></a>
         <a href="https://api.whatsapp.com/send/?phone=5491124069740" target="_blank"><img src="../images/whatsapp-icon.png" alt="Whatsapp Page"></a>
     </footer>
