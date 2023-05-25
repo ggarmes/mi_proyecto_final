@@ -33,20 +33,19 @@ header{
     z-index: 3000;
 }
 
-#img-logo{
+#headerLogo{
     width: 150px;
     padding-left: 5%;
 }
 
 header ul{
     list-style-type: none;
+    display: flex;
 }
 
 header ul li{
     text-decoration-color: none;
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
+    padding: 0px 20px;
 }
 
 header ul li:hover{
