@@ -4,78 +4,86 @@
     font-family: "Kanit";
 }
 
-body{
+/* body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 8vh 5vh auto 5vh;/* 90px 50px auto auto;*/
+    grid-template-rows: 8vh 5vh auto 5vh;
     grid-template-areas: 
         "header header header header"
         "nav nav nav nav"
         "main main main main"
         "footer footer footer footer"
     ;
-}
+} */
 
 
 /* Estilo para el header */
 header{
-    background-color: white;
-    width: 100%;
     border-bottom: solid black 2px;
     position: sticky;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
-    grid-area: header;
     z-index: 3000;
 }
 
-#headerLogo{
+.navbar{
+    background-color: white !important;
+}
+
+.header__logo{
     width: 150px;
-    padding-left: 5%;
 }
 
-header ul{
-    list-style-type: none;
-    display: flex;
+.nav-link{
+    font-size: 20px;
 }
 
-header ul li{
-    text-decoration-color: none;
-    padding: 0px 20px;
+.navbar-nav {
+    align-items: end;
 }
 
-header ul li:hover{
+#navbarNav {
+    justify-content: end;
+}
+
+.nav-item{
+    padding: 0 15px;
+}
+
+.nav-link{
+    color: black;
+}
+
+.nav-item:hover{
     background-color: #fec63d;
     border-radius: 20px;
 }
 
-header ul a{
-    text-decoration: none;
-    font-size: 20px;
+.active{
+    background-color: #fec63d;
+    border-radius: 20px;
     font-weight: bold;
-    font-family: "Kanit";
-    color: black;
 }
 
 
+
 /* Estilo para el banner de la frase */
-nav{
-    grid-area: nav;
+#banner__nav{
     background-color: #fec63d;
+    font-size: 10px;
+    padding: 2px 0;
+}
+
+#banner__nav h1{
     text-align: center;
-    font-family: "Kanit";
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
 
 /* Estilos para la página del home */
 main{
-    grid-area: main;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -126,7 +134,8 @@ main{
 }
 
 #nosotrosSection div{
-    margin: 30px;
+    margin: 15px;
+    text-align: -webkit-center;
 }
 
 #quienesSomos{
@@ -147,7 +156,6 @@ main{
 }
 
 #quienesSomosTexto h2{
-    font-family: "Kanit";
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
@@ -156,7 +164,6 @@ main{
 
 #quienesSomosTexto p{
     text-align: justify;
-    font-family: "Kanit";
     font-size: 18px;
     margin-top: 20px;
 }
@@ -167,22 +174,18 @@ main{
 }
 
 #misionVisionValor h2{
-    font-family: "Kanit";
     font-size: 30px;
     text-align: center;
-    margin-bottom: 20px;
     background-color: black;
     border-radius: 15px;
     color: #fec63d;
-    /* width: 100px; */
+    width: 100px;
+    font-weight: bold;
 }
 
 #misionVisionValor p{
-    padding: 30px;
-    text-align: justify;
-    font-family: "Kanit";
+    text-align: center;
     font-size: 18px;
-    margin-top: 20px;
 }
 
 
@@ -234,7 +237,6 @@ main{
 #mascotasSection{
     display: flex;
     flex-direction: column;
-
 }
 
 #mascotasSection img{
@@ -298,17 +300,14 @@ main{
 
 
 /* Estilos para el footer */
-footer{
+#footer_rrss{
     background-color: #fec63d;
-    width: 100%;
-    height: 80px;
-    grid-area: footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-footer img{
+#footer_rrss img{
     padding: 20px;
     width: 30px;
     height: 30px;
@@ -320,16 +319,71 @@ footer img{
 /* Estilos para mobile */
 @media (min-width: 576px) and (max-width: 992px){
     /* Estilo para el banner de la frase */
-    nav{
+    #banner__nav h1{
         font-size: 15px;
+    }
+
+
+
+    /* Estilos para la página de inicio */
+    .cuadroHome {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: solid gray 1px;
+    }
+
+
+
+    /* Estilos para la página de nosotros */
+    #quienesSomos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nosotrosSection div {
+        margin: 10px;
+    }
+
+    #quienesSomosTexto p {
+        text-align: justify;
+        width: 100%;
     }
 }
 
 @media (max-width: 575px){
     /* Estilo para el banner de la frase */
-    nav{
-        font-size: 10px;
+    #banner__nav h1{
+        font-size: 15px;
     }
+
+
+    /* Estilos para la página de inicio */
+    #imgPerroIndex {
+        display: none;
+    }
+
+    .cuadroHome {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+
+
+    /* Estilos para la página de nosotros */
+    #quienesSomos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #misionVisionValor {
+        flex-direction: column;
+    }
+
+    #nosotrosSection div {
+        margin: 15px;
+    }
+
 
 
     /* Estilos para la página de mascotas */
@@ -357,182 +411,3 @@ footer img{
         margin: 10px;
     }
 }
-
-
-
-/*
-*{
-    margin: 0;
-    padding: 0;
-}
-
-header{
-    background-color: white;
-    width: 100%;
-    border-bottom: solid black 2px;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-header ul{
-    list-style-type: none;
-}
-
-header ul li{
-    display: inline-block;
-}
-
-header ul a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Kanit";
-    background-color: #fec63d;
-}
-
-main{
-    padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-        "imgIndex imgIndex cuadroAdoptar textoAdoptar textoAdoptar"
-        "imgIndex imgIndex cuadroColaborar textoColaborar textoColaborar"
-        "imgIndex imgIndex cuadroVisitar textoVisitar textoVisitar"
-    ;
-    row-gap: 20px;
-    column-gap: 10px;
-    align-items: center;
-    align-content: center;
-}
-
-main img{
-    grid-area: imgIndex;
-}
-
-#imgPerroIndex{
-    align-items: end;
-}
-
-.cuadroHome{
-    width: 300px;
-    height: 150px;
-    border: solid gray 2px;
-    border-radius: 30px;
-    font-size: 30px;
-    font-family: "Kanit";
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.cuadroAdoptar{
-    grid-area: cuadroAdoptar;
-    background-color: lightpink;
-}
-
-#textoAdoptar{
-    grid-area: textoAdoptar;
-}
-
-.cuadroColaborar{
-    grid-area: cuadroColaborar;
-    background-color: lightsalmon;
-}
-
-#textoColaborar{
-    grid-area: textoColaborar;
-}
-
-.cuadroVisitar{
-    grid-area: cuadroVisitar;
-    background-color: lightseagreen;
-}
-
-#textoVisitar{
-    grid-area: textoVisitar;
-}
-
-.textoIndex{
-    font-size: 20px;
-    font-family: "Kanit";
-    text-align: justify;
-}
-
-footer{
-    background-color: #fec63d;
-    width: 100%;
-    height: 80px;
-}
-
-footer img{
-    width: 30px;
-    height: 30px;
-}
-
-
-
-
-*{
-    padding: 0%;
-    margin: 0%;
-}
-
-body{
-    background-color: whitesmoke;
-}
-
-header{
-    /*background-color: yellow;
-    width: 100%;
-    height: 20%;
-    border-bottom: double 5px yellow;
-}
-
-header *{
-    display: inline;
-}
-/*
-#logo{
-    display: inline;
-}
-
-#img-logo{
-    width: 200px;
-    padding: 35px;
-}
-
-#menu{
-    font-size: 20px;
-    font-family: "Kanit";
-    margin: 20%;
-}
-
-main{
-    background-color: beige;
-    width: 100%;
-    height: 60%;
-}
-
-footer{
-    /*background-color: aquamarine;
-    width: 100%;
-    height: 20%;
-    border-top: double 5px yellow;
-}
-
-
-
-
-
-/*
-header img{
-    padding: 10%;
-}
-
-
-#logo{
-    margin: 15px;
-
-}*/
