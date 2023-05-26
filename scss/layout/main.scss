@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    #imgPerroIndex{
+        margin: 25px;
+        width: 300px;
+    }
+    #indexSection {
+        .cuadroHome{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: solid gray 1px;
+            h2{
+                padding: 20px;
+                font-family: "Kanit";
+                font-size: 30px;
+                color: white;
+                background-color: lightcoral;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+            .textoIndex{
+                font-size: 20px;
+                margin: 20px;
+            }
+        }
+        
+        
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    main{
+        #indexSection {
+            .cuadroHome {
+                flex-direction: column;
+                align-items: center;
+                border-bottom: solid gray 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px){
+    main{
+        #imgPerroIndex {
+            display: none;
+        }
+        #indexSection{
+            h2 {
+                padding: 10px;
+                font-size: 18px;
+                text-align: center;
+            }
+            .cuadroHome {
+                margin-left: 20px;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
+                .textoIndex {
+                    font-size: 14px;
+                    margin: 10px;
+                }
+            }
+        } 
+    }
+}

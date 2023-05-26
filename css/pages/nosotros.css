@@ -1,0 +1,95 @@
+#nosotrosSection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#nosotrosSection div {
+  margin: 15px;
+  text-align: -webkit-center;
+}
+#nosotrosSection #quienesSomos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#nosotrosSection #quienesSomos img {
+  width: 400px;
+}
+#nosotrosSection #quienesSomos #quienesSomosTexto {
+  padding: 20px;
+}
+#nosotrosSection #quienesSomos #quienesSomosTexto h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: gray;
+}
+#nosotrosSection #quienesSomos #quienesSomosTexto p {
+  text-align: justify;
+  font-size: 18px;
+  margin-top: 20px;
+}
+#nosotrosSection #misionVisionValor {
+  display: flex;
+  flex-direction: row;
+}
+#nosotrosSection #misionVisionValor h2 {
+  font-size: 30px;
+  text-align: center;
+  background-color: black;
+  border-radius: 15px;
+  color: #fec63d;
+  width: 100px;
+  font-weight: bold;
+}
+#nosotrosSection #misionVisionValor p {
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  #nosotrosSection #quienesSomos {
+    display: flex;
+    flex-direction: column;
+  }
+  #nosotrosSection #quienesSomos img {
+    width: 250px;
+  }
+  #nosotrosSection #quienesSomos #quienesSomosTexto p {
+    text-align: justify;
+  }
+  #nosotrosSection div {
+    margin: 10px;
+    width: auto;
+  }
+}
+@media (max-width: 575px) {
+  #nosotrosSection div {
+    width: auto;
+    margin: 10px;
+  }
+  #nosotrosSection #quienesSomos {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+  #nosotrosSection #quienesSomos img {
+    width: 150px;
+  }
+  #nosotrosSection #quienesSomos #quienesSomosTexto p {
+    font-size: 14px;
+  }
+  #nosotrosSection #misionVisionValor {
+    flex-direction: column;
+  }
+  #nosotrosSection #misionVisionValor h2 {
+    font-size: 20px;
+  }
+  #nosotrosSection #misionVisionValor p {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=nosotros.css.map */
