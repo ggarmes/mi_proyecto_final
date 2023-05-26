@@ -219,6 +219,7 @@ main{
 .refugios h3{
     font-size: 20px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .refugios a{
