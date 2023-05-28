@@ -1,6 +1,19 @@
 @import '../basics/mediaqueries.scss';
 @import '../basics/colors.scss';
 
+
+@keyframes desplazamiento {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+
+}
 header{
     border-bottom: solid $color-secundario 2px;
     position: sticky;
@@ -19,6 +32,11 @@ header{
         @include mediaquery-mobile(){
             width: 80px;
         }
+        animation-name: desplazamiento;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+        animation-delay: 3s;
     }
 
     .nav-link{
