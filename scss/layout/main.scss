@@ -1,3 +1,7 @@
+@import '../basics/mediaqueries.scss';
+@import '../basics/colors.scss';
+@import '../basics/mixins';
+
 *{
     margin: 0;
     padding: 0;
@@ -8,76 +12,49 @@
 }
 
 main{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: flex-start;
+    @include flexbox(row, nowrap, center, center);
     #imgPerroIndex{
         margin: 25px;
         width: 300px;
+        @include mediaquery-mobile{
+            display: none;
+        }
     }
     #indexSection {
         .cuadroHome{
             margin-top: 50px;
             margin-bottom: 50px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-bottom: solid gray 1px;
+            @include flexbox(row, nowrap, center, center);
+            border-bottom: solid $color-terceario 1px;
             h2{
                 padding: 20px;
-                font-family: "Kanit";
                 font-size: 30px;
                 color: white;
                 background-color: lightcoral;
-                border-top-left-radius: 25px;
-                border-top-right-radius: 25px;
-                border-bottom-right-radius: 25px;
+                border-radius: 25px 25px 25px 0px;
+                @include mediaquery-mobile(){
+                    padding: 10px;
+                    font-size: 18px;
+                    text-align: center;
+                }
             }
             .textoIndex{
                 font-size: 20px;
                 margin: 20px;
-            }
-        }
-        
-        
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px){
-    main{
-        #indexSection {
-            .cuadroHome {
-                flex-direction: column;
-                align-items: center;
-                border-bottom: solid gray 1px;
-            }
-        }
-    }
-}
-
-@media (max-width: 575px){
-    main{
-        #imgPerroIndex {
-            display: none;
-        }
-        #indexSection{
-            h2 {
-                padding: 10px;
-                font-size: 18px;
-                text-align: center;
-            }
-            .cuadroHome {
-                margin-left: 20px;
-                margin-right: 20px;
-                display: flex;
-                flex-direction: column;
-                .textoIndex {
+                @include mediaquery-mobile(){
                     font-size: 14px;
                     margin: 10px;
                 }
             }
-        } 
+            @include mediaquery-tablet(){
+                flex-direction: column;
+                align-items: center;
+                border-bottom: solid $color-terceario 1px;
+            }
+            @include mediaquery-mobile(){
+                margin: 20px 0px;
+                flex-direction: column;
+            }
+        }
     }
 }

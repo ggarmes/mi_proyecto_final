@@ -1,67 +1,62 @@
+@import '../basics/mediaqueries.scss';
+@import '../basics/colors.scss';
+@import '../basics/mixins';
+
 #contactoSection{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flexbox(row, nowrap, center, center);
     text-align-last: right;
     iframe{
         width: 400px;
         height: 400px;
         padding: 10px;
+        @include mediaquery-tablet(){
+            width: 300px;
+            height: 300px;
+        }
+        @include mediaquery-mobile(){
+            width: 250px;
+            height: 250px;
+        }
     }
     .formulario-contacto{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column, nowrap, center, center);
         margin: 30px;
+        @include mediaquery-tablet(){
+            margin: 20px;
+        }
+        @include mediaquery-mobile(){
+            margin: 10px;
+        }
         h2{
             font-size: 35px;
             text-transform: uppercase;
             font-weight: bold;
+            @include mediaquery-tablet(){
+                font-size: 25px;
+            }
+            @include mediaquery-mobile(){
+                font-size: 18px;
+            }
         }
         p{
             font-size: 20px;
             padding: 15px;
             margin: 0;
-        }
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px){
-    #contactoSection {
-        text-align-last: unset;
-        iframe{
-            width: 300px;
-            height: 300px;
-        }
-        .formulario-contacto{
-            margin: 20px;
-            h2{
-                font-size: 25px;
-            }
-            p{
+            @include mediaquery-tablet(){
                 font-size: 18px;
                 padding: 10px;
             }
-        }
-    }
-}
-
-@media (max-width: 575px){
-    #contactoSection{
-        flex-direction: column;
-        align-items: center;
-        iframe{
-            width: 250px;
-            height: 250px;
-        }
-        .formulario-contacto{
-            margin: 10px;
-            h2{
-                font-size: 18px;
-            }
-            p{
+            @include mediaquery-mobile(){
                 font-size: 13px;
                 padding: 5px;
             }
         }
+    }
+    @include mediaquery-tablet(){
+        text-align-last: unset;
+    }
+    @include mediaquery-mobile(){
+        flex-direction: column;
+        align-items: center;
     }
 }

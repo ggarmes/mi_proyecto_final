@@ -1,6 +1,21 @@
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #mascotasSection {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #mascotasSection img {
   width: 100%;
@@ -8,7 +23,9 @@
 #mascotasSection .contenedor-cajas {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 #mascotasSection .contenedor-cajas .mascotas-caja {
   border-radius: 15px;
@@ -21,23 +38,26 @@
   text-align: center;
   font-weight: bold;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
+@media (max-width: 575px) {
+  #mascotasSection .contenedor-cajas .mascotas-caja p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
   #mascotasSection .contenedor-cajas .mascotas-caja {
     padding: 0px;
     margin: 15px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas {
-    flex-direction: column;
-  }
   #mascotasSection .contenedor-cajas .mascotas-caja {
     margin: 15px;
     padding: 10px;
   }
-  #mascotasSection .contenedor-cajas .mascotas-caja p {
-    font-size: 20px;
+}
+@media (max-width: 575px) {
+  #mascotasSection .contenedor-cajas {
+    flex-direction: column;
   }
 }
 

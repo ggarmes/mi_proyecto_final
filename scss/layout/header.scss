@@ -1,5 +1,8 @@
+@import '../basics/mediaqueries.scss';
+@import '../basics/colors.scss';
+
 header{
-    border-bottom: solid black 2px;
+    border-bottom: solid $color-secundario 2px;
     position: sticky;
     top: 0;
     left: 0;
@@ -10,10 +13,25 @@ header{
 
     .header__logo{
         width: 150px;
+        @include mediaquery-tablet(){
+            width: 100px;
+        }
+        @include mediaquery-mobile(){
+            width: 80px;
+        }
     }
 
     .nav-link{
         font-size: 20px;
+        color: $color-secundario;
+        @include mediaquery-tablet(){
+            font-size: 15px;
+            padding: 2px;
+        }
+        @include mediaquery-mobile(){
+            font-size: 15px;
+            padding: 2px;
+        }
     }
 
     .navbar-nav {
@@ -26,88 +44,45 @@ header{
 
     .nav-item{
         padding: 0 15px;
-    }
-
-    .nav-link{
-        color: black;
+        @include mediaquery-tablet(){
+            padding: 0 10px;
+        }
+        @include mediaquery-mobile(){
+            padding: 0 10px;
+        }
     }
 
     .nav-item:hover{
-        background-color: #fec63d;
+        background-color: $color-primario;
         border-radius: 20px;
     }
     
     .active{
-        background-color: #fec63d;
+        background-color: $color-primario;
         border-radius: 20px;
         font-weight: bold;
+        @include mediaquery-tablet(){
+            border-radius: 10px;
+        }
+        @include mediaquery-mobile(){
+            border-radius: 10px;
+        }
     }
 }
 
 /* Estilo para el banner de la frase */
 #banner__nav{
-    background-color: #fec63d;
+    background-color: $color-primario;
     font-size: 10px;
     padding: 2px 0;
     h1{
         text-align: center;
         font-weight: bold;
         font-size: 20px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px){
-    /* Estilo para el header */
-    header{
-        .header__logo{
-            width: 100px;
-        }
-
-        .nav-link{
-            font-size: 15px;
-            padding: 2px;
-        }
-        
-        .nav-item{
-            padding: 0 10px;
-        }
-        
-        .active{
-            background-color: #fec63d;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-    }
-    #banner__nav{
-        h1{
+        @include mediaquery-tablet(){
             font-size: 15px;
         }
-    } 
-}
-
-@media (max-width: 575px){
-    header{
-        .header__logo{
-            width: 80px;
-        }
-
-        .nav-link{
-            font-size: 15px;
-            padding: 2px;
-        }
-        
-        .nav-item{
-            padding: 0 10px;
-        }
-        
-        .active{
-            background-color: #fec63d;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-    }
-    #banner__nav{
-        h1{
+        @include mediaquery-mobile(){
             font-size: 15px;
         }
     }

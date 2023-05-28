@@ -1,26 +1,29 @@
+@import '../basics/mediaqueries.scss';
+@import '../basics/colors.scss';
+@import '../basics/mixins';
+
 #listaRefugios{
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox(column, nowrap, center, center);
     h2{
         padding: 15px;
         font-size: 40px;
         text-transform: uppercase;
         font-weight: bold;
+        @include mediaquery-mobile(){
+            text-align: center;
+            font-size: 25px;
+        }
     }
     .contenedor-refugios{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        @include flexbox(row, wrap, center, normal);
         .refugios{
             width: 200px;
-            /* height: 150px; */
             margin: 10px;
             padding: 5px;
-            background-color: #fec63d;
-            border: 1px solid black;
+            background-color: $color-primario;
+            border: 1px solid $color-secundario;
             border-radius: 10px;
             img{
                 width: 20px;
@@ -32,32 +35,23 @@
             }
             a{
                 text-decoration: none;
-                color: black;
+                color: $color-secundario;
             }
-        }
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px){
-        #mascotaRefugios{
-            display: none;
-        }
-}
-
-@media (max-width: 575px){
-    /* Estilos para la página de refugios */
-    #mascotaRefugios{
-        display: none;
-    }
-    #listaRefugios{
-        h2 {
-            text-align: center;
-            font-size: 25px;
-        }
-        .contenedor-refugios{
-            .refugios {
+            @include mediaquery-mobile(){
                 width: 150px;
             }
         }
-    }   
+    }
+}
+
+@include mediaquery-tablet(){
+    #mascotaRefugios{
+        display: none;
+    }
+}
+
+@include mediaquery-mobile(){
+    #mascotaRefugios{
+        display: none;
+    }
 }

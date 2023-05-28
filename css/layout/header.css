@@ -1,3 +1,15 @@
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 header {
   border-bottom: solid black 2px;
   position: sticky;
@@ -11,8 +23,31 @@ header .navbar {
 header .header__logo {
   width: 150px;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .header__logo {
+    width: 100px;
+  }
+}
+@media (max-width: 575px) {
+  header .header__logo {
+    width: 80px;
+  }
+}
 header .nav-link {
   font-size: 20px;
+  color: black;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .nav-link {
+    font-size: 15px;
+    padding: 2px;
+  }
+}
+@media (max-width: 575px) {
+  header .nav-link {
+    font-size: 15px;
+    padding: 2px;
+  }
 }
 header .navbar-nav {
   align-items: end;
@@ -23,8 +58,15 @@ header #navbarNav {
 header .nav-item {
   padding: 0 15px;
 }
-header .nav-link {
-  color: black;
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .nav-item {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 575px) {
+  header .nav-item {
+    padding: 0 10px;
+  }
 }
 header .nav-item:hover {
   background-color: #fec63d;
@@ -34,6 +76,16 @@ header .active {
   background-color: #fec63d;
   border-radius: 20px;
   font-weight: bold;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .active {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 575px) {
+  header .active {
+    border-radius: 10px;
+  }
 }
 
 /* Estilo para el banner de la frase */
@@ -47,44 +99,12 @@ header .active {
   font-weight: bold;
   font-size: 20px;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
-  /* Estilo para el header */
-  header .header__logo {
-    width: 100px;
-  }
-  header .nav-link {
-    font-size: 15px;
-    padding: 2px;
-  }
-  header .nav-item {
-    padding: 0 10px;
-  }
-  header .active {
-    background-color: #fec63d;
-    border-radius: 10px;
-    font-weight: bold;
-  }
+@media (min-width: 576px) and (max-width: 1024px) {
   #banner__nav h1 {
     font-size: 15px;
   }
 }
 @media (max-width: 575px) {
-  header .header__logo {
-    width: 80px;
-  }
-  header .nav-link {
-    font-size: 15px;
-    padding: 2px;
-  }
-  header .nav-item {
-    padding: 0 10px;
-  }
-  header .active {
-    background-color: #fec63d;
-    border-radius: 10px;
-    font-weight: bold;
-  }
   #banner__nav h1 {
     font-size: 15px;
   }

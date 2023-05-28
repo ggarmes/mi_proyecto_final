@@ -1,31 +1,17 @@
-#footer_rrss {
-  background-color: #fec63d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#footer_rrss img {
-  margin: 5px;
-  padding: 3px 0;
-  width: 30px;
-  height: 30px;
-  align-content: center;
-}
-#footer_rrss p {
-  padding: 3px 0;
-  margin: 0;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 4 |     background-color: $color-primario;
+ *   |                       ^^^^^^^^^^^^^^^
+ *   '
+ *   scss\layout\footer.scss 4:23  root stylesheet */
 
-@media (max-width: 575px) {
-  #footer_rrss img {
-    margin: 3px;
-    width: 25px;
-    height: 25px;
-  }
-  #footer_rrss p {
-    padding: 1px 0;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 4 \2502      background-color: $color-primario;\d\a   \2502                        ^^^^^^^^^^^^^^^\a   \2575 \a   scss\\layout\\footer.scss 4:23  root stylesheet";
 }
-
-/*# sourceMappingURL=footer.css.map */

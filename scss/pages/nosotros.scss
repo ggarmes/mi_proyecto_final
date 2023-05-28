@@ -1,103 +1,88 @@
+@import '../basics/mediaqueries';
+@import '../basics/colors';
+@import '../basics/mixins';
+
 #nosotrosSection{
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flexbox(column, nowrap, center, center);
     div{
         margin: 15px;
         text-align: -webkit-center;
+        @include mediaquery-tablet(){
+            margin: 10px;
+            // width: auto;
+        }
+        @include mediaquery-mobile(){
+            margin: 5px;
+        }
     }
     #quienesSomos{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        @include flexbox(row, nowrap, center, center);
         img{
             width: 400px;
+            @include mediaquery-tablet(){
+                width: 250px;
+            }
+            @include mediaquery-mobile(){
+                width: 150px;
+            }
         }
         #quienesSomosTexto{
             padding: 20px;
+            @include mediaquery-mobile(){
+                padding: 5px;
+            }
             h2{
                 font-size: 30px;
                 text-align: center;
                 margin-bottom: 20px;
-                color: gray;
             }
             p{
                 text-align: justify;
                 font-size: 18px;
                 margin-top: 20px;
+                @include mediaquery-tablet(){
+                    text-align: justify;
+                }
+                @include mediaquery-mobile(){
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
             }
+        }
+        @include mediaquery-tablet(){
+            display: flex;
+            flex-direction: column;
+        }
+        @include mediaquery-mobile(){
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $color-secundario;
         }
     }
     #misionVisionValor{
-        display: flex;
-        flex-direction: row;
+        @include flexbox(row, nowrap, center, center);
         h2{
             font-size: 30px;
             text-align: center;
-            background-color: black;
+            background-color: $color-secundario;
             border-radius: 15px;
-            color: #fec63d;
-            width: 100px;
+            width: 120px;
             font-weight: bold;
+            @include mediaquery-mobile(){
+                font-size: 20px;
+            }
         }
         p{
             text-align: center;
             font-size: 18px;
-        }
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px){
-    #nosotrosSection{
-        #quienesSomos {
-            display: flex;
-            flex-direction: column;
-            img {
-                width: 250px;
-            }
-            #quienesSomosTexto{
-                p {
-                    text-align: justify;
-                    // width: 100%;
-                }
-            }
-        }
-        div {
-            margin: 10px;
-            width: auto;
-        }
-    }
-}
-
-@media (max-width: 575px){
-    #nosotrosSection{
-        div {
-            width: auto;
-            margin: 10px;
-        }
-        #quienesSomos {
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid black;
-            img {
-                width: 150px;
-            }
-            #quienesSomosTexto{
-                p {
-                    font-size: 14px;
-                }
-            }
-        }
-        #misionVisionValor {
-            flex-direction: column;
-            h2 {
-                font-size: 20px;
-            }
-            p {
+            @include mediaquery-mobile(){
                 font-size: 14px;
             }
+        }
+        @include mediaquery-mobile(){
+            flex-direction: column;
         }
     }
 }

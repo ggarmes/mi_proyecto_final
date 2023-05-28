@@ -1,7 +1,30 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap");
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 * {
   font-family: "Kanit";
+}
+
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
 }
 
 header {
@@ -17,8 +40,31 @@ header .navbar {
 header .header__logo {
   width: 150px;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .header__logo {
+    width: 100px;
+  }
+}
+@media (max-width: 575px) {
+  header .header__logo {
+    width: 80px;
+  }
+}
 header .nav-link {
   font-size: 20px;
+  color: black;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .nav-link {
+    font-size: 15px;
+    padding: 2px;
+  }
+}
+@media (max-width: 575px) {
+  header .nav-link {
+    font-size: 15px;
+    padding: 2px;
+  }
 }
 header .navbar-nav {
   align-items: end;
@@ -29,8 +75,15 @@ header #navbarNav {
 header .nav-item {
   padding: 0 15px;
 }
-header .nav-link {
-  color: black;
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .nav-item {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 575px) {
+  header .nav-item {
+    padding: 0 10px;
+  }
 }
 header .nav-item:hover {
   background-color: #fec63d;
@@ -40,6 +93,16 @@ header .active {
   background-color: #fec63d;
   border-radius: 20px;
   font-weight: bold;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  header .active {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 575px) {
+  header .active {
+    border-radius: 10px;
+  }
 }
 
 /* Estilo para el banner de la frase */
@@ -53,48 +116,29 @@ header .active {
   font-weight: bold;
   font-size: 20px;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
-  /* Estilo para el header */
-  header .header__logo {
-    width: 100px;
-  }
-  header .nav-link {
-    font-size: 15px;
-    padding: 2px;
-  }
-  header .nav-item {
-    padding: 0 10px;
-  }
-  header .active {
-    background-color: #fec63d;
-    border-radius: 10px;
-    font-weight: bold;
-  }
+@media (min-width: 576px) and (max-width: 1024px) {
   #banner__nav h1 {
     font-size: 15px;
   }
 }
 @media (max-width: 575px) {
-  header .header__logo {
-    width: 80px;
-  }
-  header .nav-link {
-    font-size: 15px;
-    padding: 2px;
-  }
-  header .nav-item {
-    padding: 0 10px;
-  }
-  header .active {
-    background-color: #fec63d;
-    border-radius: 10px;
-    font-weight: bold;
-  }
   #banner__nav h1 {
     font-size: 15px;
   }
 }
+
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -107,38 +151,54 @@ header .active {
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: center;
-  align-content: flex-start;
+  align-items: center;
 }
 main #imgPerroIndex {
   margin: 25px;
   width: 300px;
+}
+@media (max-width: 575px) {
+  main #imgPerroIndex {
+    display: none;
+  }
 }
 main #indexSection .cuadroHome {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   border-bottom: solid gray 1px;
 }
 main #indexSection .cuadroHome h2 {
   padding: 20px;
-  font-family: "Kanit";
   font-size: 30px;
   color: white;
   background-color: lightcoral;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 25px 25px 25px 0px;
+}
+@media (max-width: 575px) {
+  main #indexSection .cuadroHome h2 {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
 }
 main #indexSection .cuadroHome .textoIndex {
   font-size: 20px;
   margin: 20px;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
+@media (max-width: 575px) {
+  main #indexSection .cuadroHome .textoIndex {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
   main #indexSection .cuadroHome {
     flex-direction: column;
     align-items: center;
@@ -146,25 +206,12 @@ main #indexSection .cuadroHome .textoIndex {
   }
 }
 @media (max-width: 575px) {
-  main #imgPerroIndex {
-    display: none;
-  }
-  main #indexSection h2 {
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
   main #indexSection .cuadroHome {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
+    margin: 20px 0px;
     flex-direction: column;
   }
-  main #indexSection .cuadroHome .textoIndex {
-    font-size: 14px;
-    margin: 10px;
-  }
 }
+
 #footer_rrss {
   background-color: #fec63d;
   display: flex;
@@ -179,119 +226,175 @@ main #indexSection .cuadroHome .textoIndex {
   height: 30px;
   align-content: center;
 }
-#footer_rrss p {
-  padding: 3px 0;
-  margin: 0;
-}
-
 @media (max-width: 575px) {
   #footer_rrss img {
     margin: 3px;
     width: 25px;
     height: 25px;
   }
+}
+#footer_rrss p {
+  padding: 3px 0;
+  margin: 0;
+}
+@media (max-width: 575px) {
   #footer_rrss p {
     padding: 1px 0;
+    font-size: 12px;
   }
 }
+
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #nosotrosSection {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #nosotrosSection div {
   margin: 15px;
   text-align: -webkit-center;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #nosotrosSection div {
+    margin: 10px;
+  }
+}
+@media (max-width: 575px) {
+  #nosotrosSection div {
+    margin: 5px;
+  }
+}
 #nosotrosSection #quienesSomos {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 #nosotrosSection #quienesSomos img {
   width: 400px;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #nosotrosSection #quienesSomos img {
+    width: 250px;
+  }
+}
+@media (max-width: 575px) {
+  #nosotrosSection #quienesSomos img {
+    width: 150px;
+  }
+}
 #nosotrosSection #quienesSomos #quienesSomosTexto {
   padding: 20px;
+}
+@media (max-width: 575px) {
+  #nosotrosSection #quienesSomos #quienesSomosTexto {
+    padding: 5px;
+  }
 }
 #nosotrosSection #quienesSomos #quienesSomosTexto h2 {
   font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
-  color: gray;
 }
 #nosotrosSection #quienesSomos #quienesSomosTexto p {
   text-align: justify;
   font-size: 18px;
   margin-top: 20px;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #nosotrosSection #quienesSomos #quienesSomosTexto p {
+    text-align: justify;
+  }
+}
+@media (max-width: 575px) {
+  #nosotrosSection #quienesSomos #quienesSomosTexto p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #nosotrosSection #quienesSomos {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  #nosotrosSection #quienesSomos {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+}
 #nosotrosSection #misionVisionValor {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #nosotrosSection #misionVisionValor h2 {
   font-size: 30px;
   text-align: center;
   background-color: black;
   border-radius: 15px;
-  color: #fec63d;
-  width: 100px;
+  width: 120px;
   font-weight: bold;
+}
+@media (max-width: 575px) {
+  #nosotrosSection #misionVisionValor h2 {
+    font-size: 20px;
+  }
 }
 #nosotrosSection #misionVisionValor p {
   text-align: center;
   font-size: 18px;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
-  #nosotrosSection #quienesSomos {
-    display: flex;
-    flex-direction: column;
-  }
-  #nosotrosSection #quienesSomos img {
-    width: 250px;
-  }
-  #nosotrosSection #quienesSomos #quienesSomosTexto p {
-    text-align: justify;
-  }
-  #nosotrosSection div {
-    margin: 10px;
-    width: auto;
-  }
-}
 @media (max-width: 575px) {
-  #nosotrosSection div {
-    width: auto;
-    margin: 10px;
-  }
-  #nosotrosSection #quienesSomos {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-  }
-  #nosotrosSection #quienesSomos img {
-    width: 150px;
-  }
-  #nosotrosSection #quienesSomos #quienesSomosTexto p {
-    font-size: 14px;
-  }
-  #nosotrosSection #misionVisionValor {
-    flex-direction: column;
-  }
-  #nosotrosSection #misionVisionValor h2 {
-    font-size: 20px;
-  }
   #nosotrosSection #misionVisionValor p {
     font-size: 14px;
   }
 }
+@media (max-width: 575px) {
+  #nosotrosSection #misionVisionValor {
+    flex-direction: column;
+  }
+}
+
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #listaRefugios {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
 }
 #listaRefugios h2 {
@@ -300,14 +403,21 @@ main #indexSection .cuadroHome .textoIndex {
   text-transform: uppercase;
   font-weight: bold;
 }
+@media (max-width: 575px) {
+  #listaRefugios h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+}
 #listaRefugios .contenedor-refugios {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: normal;
 }
 #listaRefugios .contenedor-refugios .refugios {
   width: 200px;
-  /* height: 150px; */
   margin: 10px;
   padding: 5px;
   background-color: #fec63d;
@@ -326,28 +436,40 @@ main #indexSection .cuadroHome .textoIndex {
   text-decoration: none;
   color: black;
 }
+@media (max-width: 575px) {
+  #listaRefugios .contenedor-refugios .refugios {
+    width: 150px;
+  }
+}
 
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 1024px) {
   #mascotaRefugios {
     display: none;
   }
 }
 @media (max-width: 575px) {
-  /* Estilos para la página de refugios */
   #mascotaRefugios {
     display: none;
   }
-  #listaRefugios h2 {
-    text-align: center;
-    font-size: 25px;
-  }
-  #listaRefugios .contenedor-refugios .refugios {
-    width: 150px;
-  }
 }
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #mascotasSection {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #mascotasSection img {
   width: 100%;
@@ -355,7 +477,9 @@ main #indexSection .cuadroHome .textoIndex {
 #mascotasSection .contenedor-cajas {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 #mascotasSection .contenedor-cajas .mascotas-caja {
   border-radius: 15px;
@@ -368,28 +492,46 @@ main #indexSection .cuadroHome .textoIndex {
   text-align: center;
   font-weight: bold;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
+@media (max-width: 575px) {
+  #mascotasSection .contenedor-cajas .mascotas-caja p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
   #mascotasSection .contenedor-cajas .mascotas-caja {
     padding: 0px;
     margin: 15px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas {
-    flex-direction: column;
-  }
   #mascotasSection .contenedor-cajas .mascotas-caja {
     margin: 15px;
     padding: 10px;
   }
-  #mascotasSection .contenedor-cajas .mascotas-caja p {
-    font-size: 20px;
+}
+@media (max-width: 575px) {
+  #mascotasSection .contenedor-cajas {
+    flex-direction: column;
   }
 }
+
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #contactoSection {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   text-align-last: right;
 }
@@ -398,59 +540,77 @@ main #indexSection .cuadroHome .textoIndex {
   height: 400px;
   padding: 10px;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #contactoSection iframe {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 575px) {
+  #contactoSection iframe {
+    width: 250px;
+    height: 250px;
+  }
+}
 #contactoSection .formulario-contacto {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   margin: 30px;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #contactoSection .formulario-contacto {
+    margin: 20px;
+  }
+}
+@media (max-width: 575px) {
+  #contactoSection .formulario-contacto {
+    margin: 10px;
+  }
 }
 #contactoSection .formulario-contacto h2 {
   font-size: 35px;
   text-transform: uppercase;
   font-weight: bold;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #contactoSection .formulario-contacto h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 575px) {
+  #contactoSection .formulario-contacto h2 {
+    font-size: 18px;
+  }
+}
 #contactoSection .formulario-contacto p {
   font-size: 20px;
   padding: 15px;
   margin: 0;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
-  #contactoSection {
-    text-align-last: unset;
-  }
-  #contactoSection iframe {
-    width: 300px;
-    height: 300px;
-  }
-  #contactoSection .formulario-contacto {
-    margin: 20px;
-  }
-  #contactoSection .formulario-contacto h2 {
-    font-size: 25px;
-  }
+@media (min-width: 576px) and (max-width: 1024px) {
   #contactoSection .formulario-contacto p {
     font-size: 18px;
     padding: 10px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection {
-    flex-direction: column;
-    align-items: center;
-  }
-  #contactoSection iframe {
-    width: 250px;
-    height: 250px;
-  }
-  #contactoSection .formulario-contacto {
-    margin: 10px;
-  }
-  #contactoSection .formulario-contacto h2 {
-    font-size: 18px;
-  }
   #contactoSection .formulario-contacto p {
     font-size: 13px;
     padding: 5px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #contactoSection {
+    text-align-last: unset;
+  }
+}
+@media (max-width: 575px) {
+  #contactoSection {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

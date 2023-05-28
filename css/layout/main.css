@@ -1,3 +1,15 @@
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,38 +22,54 @@
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: center;
-  align-content: flex-start;
+  align-items: center;
 }
 main #imgPerroIndex {
   margin: 25px;
   width: 300px;
+}
+@media (max-width: 575px) {
+  main #imgPerroIndex {
+    display: none;
+  }
 }
 main #indexSection .cuadroHome {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   border-bottom: solid gray 1px;
 }
 main #indexSection .cuadroHome h2 {
   padding: 20px;
-  font-family: "Kanit";
   font-size: 30px;
   color: white;
   background-color: lightcoral;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 25px 25px 25px 0px;
+}
+@media (max-width: 575px) {
+  main #indexSection .cuadroHome h2 {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
 }
 main #indexSection .cuadroHome .textoIndex {
   font-size: 20px;
   margin: 20px;
 }
-
-@media (min-width: 576px) and (max-width: 992px) {
+@media (max-width: 575px) {
+  main #indexSection .cuadroHome .textoIndex {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
   main #indexSection .cuadroHome {
     flex-direction: column;
     align-items: center;
@@ -49,23 +77,9 @@ main #indexSection .cuadroHome .textoIndex {
   }
 }
 @media (max-width: 575px) {
-  main #imgPerroIndex {
-    display: none;
-  }
-  main #indexSection h2 {
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
   main #indexSection .cuadroHome {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
+    margin: 20px 0px;
     flex-direction: column;
-  }
-  main #indexSection .cuadroHome .textoIndex {
-    font-size: 14px;
-    margin: 10px;
   }
 }
 
