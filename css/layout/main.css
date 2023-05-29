@@ -35,17 +35,20 @@ main #imgPerroIndex {
     display: none;
   }
 }
-main #indexSection .cuadroHome {
+main #indexSection .cuadro__inicio {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: solid gray 1px;
 }
-main #indexSection .cuadroHome h2 {
+main #indexSection .cuadro__inicio a {
+  text-decoration: none;
+}
+main #indexSection .cuadro__inicio h2 {
   padding: 20px;
   font-size: 30px;
   color: white;
@@ -53,31 +56,31 @@ main #indexSection .cuadroHome h2 {
   border-radius: 25px 25px 25px 0px;
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome h2 {
+  main #indexSection .cuadro__inicio h2 {
     padding: 10px;
     font-size: 18px;
     text-align: center;
   }
 }
-main #indexSection .cuadroHome .textoIndex {
+main #indexSection .cuadro__inicio .textoIndex {
   font-size: 20px;
   margin: 20px;
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome .textoIndex {
+  main #indexSection .cuadro__inicio .textoIndex {
     font-size: 14px;
     margin: 10px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  main #indexSection .cuadroHome {
+  main #indexSection .cuadro__inicio {
     flex-direction: column;
     align-items: center;
     border-bottom: solid gray 1px;
   }
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome {
+  main #indexSection .cuadro__inicio {
     margin: 20px 0px;
     flex-direction: column;
   }

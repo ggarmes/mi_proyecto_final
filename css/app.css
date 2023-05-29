@@ -122,23 +122,23 @@ header .active {
 }
 
 /* Estilo para el banner de la frase */
-#banner__nav {
+#nav__slogan {
   background-color: #fec63d;
   font-size: 10px;
   padding: 2px 0;
 }
-#banner__nav h1 {
+#nav__slogan h1 {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #banner__nav h1 {
+  #nav__slogan h1 {
     font-size: 15px;
   }
 }
 @media (max-width: 575px) {
-  #banner__nav h1 {
+  #nav__slogan h1 {
     font-size: 15px;
   }
 }
@@ -180,17 +180,20 @@ main #imgPerroIndex {
     display: none;
   }
 }
-main #indexSection .cuadroHome {
+main #indexSection .cuadro__inicio {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: solid gray 1px;
 }
-main #indexSection .cuadroHome h2 {
+main #indexSection .cuadro__inicio a {
+  text-decoration: none;
+}
+main #indexSection .cuadro__inicio h2 {
   padding: 20px;
   font-size: 30px;
   color: white;
@@ -198,31 +201,31 @@ main #indexSection .cuadroHome h2 {
   border-radius: 25px 25px 25px 0px;
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome h2 {
+  main #indexSection .cuadro__inicio h2 {
     padding: 10px;
     font-size: 18px;
     text-align: center;
   }
 }
-main #indexSection .cuadroHome .textoIndex {
+main #indexSection .cuadro__inicio .textoIndex {
   font-size: 20px;
   margin: 20px;
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome .textoIndex {
+  main #indexSection .cuadro__inicio .textoIndex {
     font-size: 14px;
     margin: 10px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  main #indexSection .cuadroHome {
+  main #indexSection .cuadro__inicio {
     flex-direction: column;
     align-items: center;
     border-bottom: solid gray 1px;
   }
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadroHome {
+  main #indexSection .cuadro__inicio {
     margin: 20px 0px;
     flex-direction: column;
   }
@@ -425,14 +428,14 @@ main #indexSection .cuadroHome .textoIndex {
     font-size: 25px;
   }
 }
-#listaRefugios .contenedor-refugios {
+#listaRefugios .contenedor__refugios {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: normal;
 }
-#listaRefugios .contenedor-refugios .refugios {
+#listaRefugios .contenedor__refugios .refugios {
   width: 200px;
   margin: 10px;
   padding: 5px;
@@ -440,20 +443,20 @@ main #indexSection .cuadroHome .textoIndex {
   border: 1px solid black;
   border-radius: 10px;
 }
-#listaRefugios .contenedor-refugios .refugios img {
+#listaRefugios .contenedor__refugios .refugios img {
   width: 20px;
 }
-#listaRefugios .contenedor-refugios .refugios h3 {
+#listaRefugios .contenedor__refugios .refugios h3 {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
 }
-#listaRefugios .contenedor-refugios .refugios a {
+#listaRefugios .contenedor__refugios .refugios a {
   text-decoration: none;
   color: black;
 }
 @media (max-width: 575px) {
-  #listaRefugios .contenedor-refugios .refugios {
+  #listaRefugios .contenedor__refugios .refugios {
     width: 150px;
   }
 }
@@ -490,43 +493,46 @@ main #indexSection .cuadroHome .textoIndex {
 #mascotasSection img {
   width: 100%;
 }
-#mascotasSection .contenedor-cajas {
+#mascotasSection .contenedor__cajas {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
-#mascotasSection .contenedor-cajas .mascotas-caja {
+#mascotasSection .contenedor__cajas a {
+  text-decoration: none;
+}
+#mascotasSection .contenedor__cajas .mascotas__caja {
   border-radius: 15px;
   background-color: #fec63d;
   margin: 30px;
   padding: 15px;
 }
-#mascotasSection .contenedor-cajas .mascotas-caja p {
+#mascotasSection .contenedor__cajas .mascotas__caja p {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja p {
+  #mascotasSection .contenedor__cajas .mascotas__caja p {
     font-size: 20px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja {
+  #mascotasSection .contenedor__cajas .mascotas__caja {
     padding: 0px;
     margin: 15px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja {
+  #mascotasSection .contenedor__cajas .mascotas__caja {
     margin: 15px;
     padding: 10px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas {
+  #mascotasSection .contenedor__cajas {
     flex-direction: column;
   }
 }
@@ -568,7 +574,7 @@ main #indexSection .cuadroHome .textoIndex {
     height: 250px;
   }
 }
-#contactoSection .formulario-contacto {
+#contactoSection .formulario__contacto {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -577,43 +583,43 @@ main #indexSection .cuadroHome .textoIndex {
   margin: 30px;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto {
+  #contactoSection .formulario__contacto {
     margin: 20px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto {
+  #contactoSection .formulario__contacto {
     margin: 10px;
   }
 }
-#contactoSection .formulario-contacto h2 {
+#contactoSection .formulario__contacto h2 {
   font-size: 35px;
   text-transform: uppercase;
   font-weight: bold;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto h2 {
+  #contactoSection .formulario__contacto h2 {
     font-size: 25px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto h2 {
+  #contactoSection .formulario__contacto h2 {
     font-size: 18px;
   }
 }
-#contactoSection .formulario-contacto p {
+#contactoSection .formulario__contacto p {
   font-size: 20px;
   padding: 15px;
   margin: 0;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto p {
+  #contactoSection .formulario__contacto p {
     font-size: 18px;
     padding: 10px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto p {
+  #contactoSection .formulario__contacto p {
     font-size: 13px;
     padding: 5px;
   }
@@ -628,6 +634,28 @@ main #indexSection .cuadroHome .textoIndex {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.imagen__donacion {
+  width: 80px;
+}
+
+.imagen__construccion {
+  width: 200px;
+}
+
+.caja {
+  background-color: lightcoral;
+  height: auto;
+  aspect-ratio: 1/1; /* para que sea una caja cuadrada -- misma cantidad de alto que tenga de anchi */
+}
+
+.row {
+  flex-wrap: nowrap;
+}
+
+.imagen__construccion {
+  width: 400px;
 }
 
 /*# sourceMappingURL=app.css.map */

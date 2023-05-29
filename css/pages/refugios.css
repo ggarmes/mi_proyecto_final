@@ -31,14 +31,14 @@
     font-size: 25px;
   }
 }
-#listaRefugios .contenedor-refugios {
+#listaRefugios .contenedor__refugios {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: normal;
 }
-#listaRefugios .contenedor-refugios .refugios {
+#listaRefugios .contenedor__refugios .refugios {
   width: 200px;
   margin: 10px;
   padding: 5px;
@@ -46,20 +46,20 @@
   border: 1px solid black;
   border-radius: 10px;
 }
-#listaRefugios .contenedor-refugios .refugios img {
+#listaRefugios .contenedor__refugios .refugios img {
   width: 20px;
 }
-#listaRefugios .contenedor-refugios .refugios h3 {
+#listaRefugios .contenedor__refugios .refugios h3 {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
 }
-#listaRefugios .contenedor-refugios .refugios a {
+#listaRefugios .contenedor__refugios .refugios a {
   text-decoration: none;
   color: black;
 }
 @media (max-width: 575px) {
-  #listaRefugios .contenedor-refugios .refugios {
+  #listaRefugios .contenedor__refugios .refugios {
     width: 150px;
   }
 }

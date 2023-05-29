@@ -7,9 +7,12 @@
     img{
         width: 100%;
     }
-    .contenedor-cajas{
+    .contenedor__cajas{
         @include flexbox(row, nowrap, center, center);
-        .mascotas-caja{
+        a{
+            text-decoration: none;
+        }
+        .mascotas__caja{
             border-radius: 15px;
             background-color: $color-primario;
             margin: 30px;

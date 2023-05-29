@@ -35,7 +35,7 @@
     height: 250px;
   }
 }
-#contactoSection .formulario-contacto {
+#contactoSection .formulario__contacto {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -44,43 +44,43 @@
   margin: 30px;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto {
+  #contactoSection .formulario__contacto {
     margin: 20px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto {
+  #contactoSection .formulario__contacto {
     margin: 10px;
   }
 }
-#contactoSection .formulario-contacto h2 {
+#contactoSection .formulario__contacto h2 {
   font-size: 35px;
   text-transform: uppercase;
   font-weight: bold;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto h2 {
+  #contactoSection .formulario__contacto h2 {
     font-size: 25px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto h2 {
+  #contactoSection .formulario__contacto h2 {
     font-size: 18px;
   }
 }
-#contactoSection .formulario-contacto p {
+#contactoSection .formulario__contacto p {
   font-size: 20px;
   padding: 15px;
   margin: 0;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #contactoSection .formulario-contacto p {
+  #contactoSection .formulario__contacto p {
     font-size: 18px;
     padding: 10px;
   }
 }
 @media (max-width: 575px) {
-  #contactoSection .formulario-contacto p {
+  #contactoSection .formulario__contacto p {
     font-size: 13px;
     padding: 5px;
   }

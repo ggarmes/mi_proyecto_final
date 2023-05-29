@@ -16,7 +16,7 @@
             font-size: 25px;
         }
     }
-    .contenedor-refugios{
+    .contenedor__refugios{
         @include flexbox(row, wrap, center, normal);
         .refugios{
             width: 200px;

@@ -105,23 +105,23 @@ header .active {
 }
 
 /* Estilo para el banner de la frase */
-#banner__nav {
+#nav__slogan {
   background-color: #fec63d;
   font-size: 10px;
   padding: 2px 0;
 }
-#banner__nav h1 {
+#nav__slogan h1 {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #banner__nav h1 {
+  #nav__slogan h1 {
     font-size: 15px;
   }
 }
 @media (max-width: 575px) {
-  #banner__nav h1 {
+  #nav__slogan h1 {
     font-size: 15px;
   }
 }

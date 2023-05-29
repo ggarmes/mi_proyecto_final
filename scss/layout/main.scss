@@ -21,11 +21,14 @@ main{
         }
     }
     #indexSection {
-        .cuadroHome{
+        .cuadro__inicio{
             margin-top: 50px;
             margin-bottom: 50px;
-            @include flexbox(row, nowrap, center, center);
+            @include flexbox(row, nowrap, flex-start, center);
             border-bottom: solid $color-terceario 1px;
+            a{
+                text-decoration: none;
+            }
             h2{
                 padding: 20px;
                 font-size: 30px;

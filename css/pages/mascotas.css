@@ -20,43 +20,46 @@
 #mascotasSection img {
   width: 100%;
 }
-#mascotasSection .contenedor-cajas {
+#mascotasSection .contenedor__cajas {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
-#mascotasSection .contenedor-cajas .mascotas-caja {
+#mascotasSection .contenedor__cajas a {
+  text-decoration: none;
+}
+#mascotasSection .contenedor__cajas .mascotas__caja {
   border-radius: 15px;
   background-color: #fec63d;
   margin: 30px;
   padding: 15px;
 }
-#mascotasSection .contenedor-cajas .mascotas-caja p {
+#mascotasSection .contenedor__cajas .mascotas__caja p {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja p {
+  #mascotasSection .contenedor__cajas .mascotas__caja p {
     font-size: 20px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja {
+  #mascotasSection .contenedor__cajas .mascotas__caja {
     padding: 0px;
     margin: 15px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas .mascotas-caja {
+  #mascotasSection .contenedor__cajas .mascotas__caja {
     margin: 15px;
     padding: 10px;
   }
 }
 @media (max-width: 575px) {
-  #mascotasSection .contenedor-cajas {
+  #mascotasSection .contenedor__cajas {
     flex-direction: column;
   }
 }
