@@ -234,18 +234,14 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
-#footer_rrss {
+.fixed-bottom {
   background-color: #fec63d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
-#footer_rrss img {
+.fixed-bottom img {
   margin: 5px;
   padding: 3px 0;
   width: 30px;
@@ -253,18 +249,18 @@ main #indexSection .cuadro__inicio .textoIndex {
   align-content: center;
 }
 @media (max-width: 575px) {
-  #footer_rrss img {
+  .fixed-bottom img {
     margin: 3px;
     width: 25px;
     height: 25px;
   }
 }
-#footer_rrss p {
+.fixed-bottom p {
   padding: 3px 0;
   margin: 0;
 }
 @media (max-width: 575px) {
-  #footer_rrss p {
+  .fixed-bottom p {
     padding: 1px 0;
     font-size: 12px;
   }
@@ -394,10 +390,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
-#main__refugios {
-  margin-bottom: 100px;
-}
-
 #listaRefugios {
   height: 100%;
   width: 100%;
@@ -467,10 +459,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-}
-#mascotasSection img {
-  width: 100%;
-  display: none;
 }
 #mascotasSection .contenedor__cajas {
   display: flex;
@@ -647,8 +635,52 @@ main #indexSection .cuadro__inicio .textoIndex {
   flex-wrap: nowrap;
 }
 
-.imagen__construccion {
-  width: 400px;
+@media (max-width: 575px) {
+  *, ::after, ::before {
+    box-sizing: none;
+  }
+}
+.container-fluid .row {
+  flex-wrap: wrap;
+}
+@media (max-width: 575px) {
+  .container-fluid .row {
+    max-width: 100%;
+  }
+}
+#seccion__login {
+  padding-top: 50px;
+  width: 500px;
+  height: 500px;
+}
+@media (max-width: 575px) {
+  #seccion__login {
+    width: 250px;
+    height: 250px;
+  }
+}
+#seccion__login img {
+  width: 300px;
+}
+@media (max-width: 575px) {
+  #seccion__login img {
+    width: 200px;
+  }
+}
+#seccion__login .form-label {
+  font-size: 22px;
+}
+#seccion__login .form-text {
+  font-size: 18px;
+}
+#seccion__login .form-check-label {
+  font-size: 20px;
+}
+#seccion__login .btn-primary {
+  background-color: #f08080;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
 }
 
 /*# sourceMappingURL=app.css.map */

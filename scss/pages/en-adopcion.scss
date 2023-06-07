@@ -1,3 +1,32 @@
-.imagen__construccion{
-    width: 400px;
+// .container-fluid{
+//     .row{
+//         flex-wrap: wrap;
+//     }
+//     .col{
+//         @include mediaquery-mobile(){
+//             width: 250px;
+//             // padding: 0;
+//             margin: 10px;
+//         }
+//     }
+// }
+
+@include mediaquery-mobile(){
+    *, ::after, ::before {
+        box-sizing: none;
+    }
+}
+
+.container-fluid{
+    .row{
+        flex-wrap: wrap;
+        @include mediaquery-mobile(){
+            max-width: 100%;
+        }
+    }
+    @include mediaquery-mobile(){
+        .card{
+            // width: 250px;
+        }
+    }
 }

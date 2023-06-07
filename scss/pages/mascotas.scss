@@ -1,9 +1,5 @@
 #mascotasSection{
     @include flexbox(column, nowrap, center, center);
-    img{
-        width: 100%;
-        display: none;
-    }
     .contenedor__cajas{
         @include flexbox(row, nowrap, center, center);
         a{
