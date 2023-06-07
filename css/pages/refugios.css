@@ -1,81 +1,17 @@
-.color-primario {
-  color: #fec63d;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 8 |     @include flexbox(column, nowrap, center, center);
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   scss\pages\refugios.scss 8:5  root stylesheet */
 
-.color-secundario {
-  color: black;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 8 \2502      @include flexbox(column, nowrap, center, center);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\pages\\refugios.scss 8:5  root stylesheet";
 }
-
-.color-terciario {
-  color: gray;
-}
-
-#main__refugios {
-  margin-bottom: 100px;
-}
-
-#listaRefugios {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#listaRefugios h2 {
-  padding: 15px;
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-@media (max-width: 575px) {
-  #listaRefugios h2 {
-    text-align: center;
-    font-size: 25px;
-  }
-}
-#listaRefugios .contenedor__refugios {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: normal;
-}
-#listaRefugios .contenedor__refugios .refugios {
-  width: 200px;
-  margin: 10px;
-  padding: 12px;
-  background-color: #fec63d;
-  border-radius: 10px;
-}
-#listaRefugios .contenedor__refugios .refugios img {
-  width: 20px;
-}
-#listaRefugios .contenedor__refugios .refugios h3 {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-#listaRefugios .contenedor__refugios .refugios a {
-  text-decoration: none;
-  color: black;
-}
-@media (max-width: 575px) {
-  #listaRefugios .contenedor__refugios .refugios {
-    width: 150px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) {
-  #mascotaRefugios {
-    display: none;
-  }
-}
-@media (max-width: 575px) {
-  #mascotaRefugios {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=refugios.css.map */

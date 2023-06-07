@@ -15,18 +15,6 @@
   font-family: "Kanit";
 }
 
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
-}
-
 @keyframes desplazamiento {
   0% {
     transform: translateX(0px);
@@ -101,7 +89,7 @@ header .nav-item {
     padding: 0 10px;
   }
 }
-header .nav-item::hover {
+header .nav-item:hover {
   background-color: #fec63d;
   border-radius: 20px;
 }
@@ -158,17 +146,18 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 @media (max-width: 575px) {
   main {
     flex-direction: column;
   }
 }
-main div h2 {
+main #main__titulo h2 {
   display: none;
 }
 @media (max-width: 575px) {
-  main div h2 {
+  main #main__titulo h2 {
     display: unset;
     font-size: 40px;
     text-align: center;
@@ -245,18 +234,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
-}
-
 #footer_rrss {
   background-color: #fec63d;
   display: flex;
@@ -291,18 +268,6 @@ main #indexSection .cuadro__inicio .textoIndex {
     padding: 1px 0;
     font-size: 12px;
   }
-}
-
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
 }
 
 #nosotrosSection {
@@ -429,18 +394,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
-}
-
 #main__refugios {
   margin-bottom: 100px;
 }
@@ -508,18 +461,6 @@ main #indexSection .cuadro__inicio .textoIndex {
     display: none;
   }
 }
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
-}
-
 #mascotasSection {
   display: flex;
   flex-direction: column;
@@ -542,7 +483,7 @@ main #indexSection .cuadro__inicio .textoIndex {
   text-decoration: none;
 }
 #mascotasSection .contenedor__cajas .mascotas__caja {
-  height: 200px;
+  height: auto;
   border-radius: 15px;
   background-color: #f08080;
   background: linear-gradient(90deg, rgb(250, 157, 157) 0%, rgb(240, 128, 128) 46%);
@@ -554,7 +495,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   color: white;
   text-align: center;
   font-weight: bold;
-  padding: 30px;
   text-transform: uppercase;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -564,7 +504,7 @@ main #indexSection .cuadro__inicio .textoIndex {
 }
 @media (max-width: 575px) {
   #mascotasSection .contenedor__cajas .mascotas__caja p {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -577,7 +517,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   #mascotasSection .contenedor__cajas .mascotas__caja {
     margin: 15px;
     padding: 10px;
-    height: 150px;
   }
 }
 @media (max-width: 575px) {
@@ -601,18 +540,6 @@ main #indexSection .cuadro__inicio .textoIndex {
   #imagenPerros {
     bottom: 75px;
   }
-}
-
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
 }
 
 #contactoSection {

@@ -9,10 +9,11 @@
 
 main{
     @include flexbox(row, nowrap, center, center);
+    margin-bottom: 100px;
     @include mediaquery-mobile{
         flex-direction: column;
     }
-    div{
+    #main__titulo{
         h2{
             display: none;
             @include mediaquery-mobile(){

@@ -1,7 +1,3 @@
-@import '../basics/mediaqueries.scss';
-@import '../basics/colors.scss';
-@import '../basics/mixins';
-
 #mascotasSection{
     @include flexbox(column, nowrap, center, center);
     img{
@@ -14,7 +10,7 @@
             text-decoration: none;
         }
         .mascotas__caja{
-            height: 200px;
+            height: auto;
             border-radius: 15px;
             background-color: #f08080;
             background: linear-gradient(90deg, rgba(250,157,157,1) 0%, rgba(240,128,128,1) 46%);
@@ -25,13 +21,12 @@
                 color: white;
                 text-align: center;
                 font-weight: bold;
-                padding: 30px;
                 text-transform: uppercase;
                 @include mediaquery-tablet(){
                     padding: 25px;
                 }
                 @include mediaquery-mobile(){
-                    font-size: 30px;
+                    font-size: 35px;
                 }
             }
             @include mediaquery-tablet(){
@@ -41,7 +36,6 @@
             @include mediaquery-mobile(){
                 margin: 15px;
                 padding: 10px;
-                height: 150px;
             }
         }
         @include mediaquery-mobile(){

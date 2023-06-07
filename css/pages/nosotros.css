@@ -1,137 +1,17 @@
-.color-primario {
-  color: #fec63d;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 4 |     @include flexbox(column, nowrap, center, center);
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   scss\pages\nosotros.scss 4:5  root stylesheet */
 
-.color-secundario {
-  color: black;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 4 \2502      @include flexbox(column, nowrap, center, center);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\pages\\nosotros.scss 4:5  root stylesheet";
 }
-
-.color-terciario {
-  color: gray;
-}
-
-#nosotrosSection {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#nosotrosSection div {
-  margin: 15px;
-  text-align: -webkit-center;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  #nosotrosSection div {
-    margin: 10px;
-  }
-}
-@media (max-width: 575px) {
-  #nosotrosSection div {
-    margin: 5px;
-  }
-}
-#nosotrosSection #quienesSomos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#nosotrosSection #quienesSomos img {
-  width: 400px;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  #nosotrosSection #quienesSomos img {
-    width: 250px;
-  }
-}
-@media (max-width: 575px) {
-  #nosotrosSection #quienesSomos img {
-    width: 150px;
-  }
-}
-#nosotrosSection #quienesSomos #quienesSomosTexto {
-  padding: 20px;
-}
-@media (max-width: 575px) {
-  #nosotrosSection #quienesSomos #quienesSomosTexto {
-    padding: 5px;
-  }
-}
-#nosotrosSection #quienesSomos #quienesSomosTexto h2 {
-  font-size: 40px;
-  text-align: left;
-  margin-bottom: 20px;
-}
-#nosotrosSection #quienesSomos #quienesSomosTexto p {
-  text-align: justify;
-  font-size: 18px;
-  margin-top: 20px;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  #nosotrosSection #quienesSomos #quienesSomosTexto p {
-    text-align: justify;
-  }
-}
-@media (max-width: 575px) {
-  #nosotrosSection #quienesSomos #quienesSomosTexto p {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  #nosotrosSection #quienesSomos {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (max-width: 575px) {
-  #nosotrosSection #quienesSomos {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-  }
-}
-#nosotrosSection #misionVisionValor {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#nosotrosSection #misionVisionValor h2 {
-  font-size: 30px;
-  text-align: center;
-  background-color: black;
-  border-radius: 15px;
-  width: 120px;
-  font-weight: bold;
-}
-@media (max-width: 575px) {
-  #nosotrosSection #misionVisionValor h2 {
-    font-size: 20px;
-  }
-}
-#nosotrosSection #misionVisionValor p {
-  text-align: center;
-  font-size: 18px;
-}
-@media (max-width: 575px) {
-  #nosotrosSection #misionVisionValor p {
-    font-size: 14px;
-  }
-}
-#nosotrosSection #misionVisionValor img {
-  width: 120px;
-  margin-bottom: 20px;
-}
-@media (max-width: 575px) {
-  #nosotrosSection #misionVisionValor {
-    flex-direction: column;
-  }
-}
-
-/*# sourceMappingURL=nosotros.css.map */

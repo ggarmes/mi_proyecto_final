@@ -1,129 +1,17 @@
-.color-primario {
-  color: #fec63d;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 14 |     border-bottom: solid $color-secundario 2px;
+ *    |                          ^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\layout\header.scss 14:26  root stylesheet */
 
-.color-secundario {
-  color: black;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 14 \2502      border-bottom: solid $color-secundario 2px;\d\a    \2502                           ^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\layout\\header.scss 14:26  root stylesheet";
 }
-
-.color-terciario {
-  color: gray;
-}
-
-@keyframes desplazamiento {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(60px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-header {
-  border-bottom: solid black 2px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 3000;
-}
-header .navbar {
-  background-color: white !important;
-}
-header .header__logo {
-  width: 150px;
-  animation-name: desplazamiento;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 5s;
-  animation-delay: 3s;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  header .header__logo {
-    width: 100px;
-  }
-}
-@media (max-width: 575px) {
-  header .header__logo {
-    width: 80px;
-  }
-}
-header .nav-link {
-  font-size: 20px;
-  color: black;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  header .nav-link {
-    font-size: 18px;
-    padding: 6px;
-  }
-}
-@media (max-width: 575px) {
-  header .nav-link {
-    font-size: 18px;
-    padding: 6px;
-  }
-}
-header .navbar-nav {
-  align-items: end;
-}
-header #navbarNav {
-  justify-content: end;
-}
-header .nav-item {
-  padding: 0 15px;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  header .nav-item {
-    padding: 0 10px;
-  }
-}
-@media (max-width: 575px) {
-  header .nav-item {
-    padding: 0 10px;
-  }
-}
-header .nav-item::hover {
-  background-color: #fec63d;
-  border-radius: 20px;
-}
-header .active {
-  background-color: #fec63d;
-  border-radius: 20px;
-  font-weight: bold;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  header .active {
-    border-radius: 10px;
-  }
-}
-@media (max-width: 575px) {
-  header .active {
-    border-radius: 10px;
-  }
-}
-
-/* Estilo para el banner de la frase */
-#nav__slogan {
-  background-color: #fec63d;
-  font-size: 10px;
-  padding: 2px 0;
-}
-#nav__slogan h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  #nav__slogan h1 {
-    font-size: 15px;
-  }
-}
-@media (max-width: 575px) {
-  #nav__slogan h1 {
-    font-size: 15px;
-  }
-}
-
-/*# sourceMappingURL=header.css.map */

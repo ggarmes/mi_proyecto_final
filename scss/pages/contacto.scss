@@ -1,7 +1,3 @@
-@import '../basics/mediaqueries.scss';
-@import '../basics/colors.scss';
-@import '../basics/mixins';
-
 #contactoSection{
     @include flexbox(row, nowrap, center, center);
     text-align-last: right;
