@@ -55,14 +55,14 @@ header .nav-link {
 }
 @media (min-width: 576px) and (max-width: 1024px) {
   header .nav-link {
-    font-size: 15px;
-    padding: 2px;
+    font-size: 18px;
+    padding: 6px;
   }
 }
 @media (max-width: 575px) {
   header .nav-link {
-    font-size: 15px;
-    padding: 2px;
+    font-size: 18px;
+    padding: 6px;
   }
 }
 header .navbar-nav {
@@ -84,7 +84,7 @@ header .nav-item {
     padding: 0 10px;
   }
 }
-header .nav-item:hover {
+header .nav-item::hover {
   background-color: #fec63d;
   border-radius: 20px;
 }

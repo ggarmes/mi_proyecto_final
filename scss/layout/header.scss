@@ -43,12 +43,12 @@ header{
         font-size: 20px;
         color: $color-secundario;
         @include mediaquery-tablet(){
-            font-size: 15px;
-            padding: 2px;
+            font-size: 18px;
+            padding: 6px;
         }
         @include mediaquery-mobile(){
-            font-size: 15px;
-            padding: 2px;
+            font-size: 18px;
+            padding: 6px;
         }
     }
 
@@ -68,12 +68,16 @@ header{
         @include mediaquery-mobile(){
             padding: 0 10px;
         }
+        &::hover{
+            background-color: $color-primario;
+            border-radius: 20px;
+        }
     }
 
-    .nav-item:hover{
-        background-color: $color-primario;
-        border-radius: 20px;
-    }
+    // .nav-item:hover{
+    //     background-color: $color-primario;
+    //     border-radius: 20px;
+    // }
     
     .active{
         background-color: $color-primario;

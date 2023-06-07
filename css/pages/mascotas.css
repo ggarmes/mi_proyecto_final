@@ -19,6 +19,7 @@
 }
 #mascotasSection img {
   width: 100%;
+  display: none;
 }
 #mascotasSection .contenedor__cajas {
   display: flex;
@@ -31,19 +32,29 @@
   text-decoration: none;
 }
 #mascotasSection .contenedor__cajas .mascotas__caja {
+  height: 200px;
   border-radius: 15px;
-  background-color: #fec63d;
+  background-color: #f08080;
+  background: linear-gradient(90deg, rgb(250, 157, 157) 0%, rgb(240, 128, 128) 46%);
   margin: 30px;
   padding: 15px;
 }
 #mascotasSection .contenedor__cajas .mascotas__caja p {
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
   text-align: center;
   font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #mascotasSection .contenedor__cajas .mascotas__caja p {
+    padding: 25px;
+  }
 }
 @media (max-width: 575px) {
   #mascotasSection .contenedor__cajas .mascotas__caja p {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -56,11 +67,29 @@
   #mascotasSection .contenedor__cajas .mascotas__caja {
     margin: 15px;
     padding: 10px;
+    height: 150px;
   }
 }
 @media (max-width: 575px) {
   #mascotasSection .contenedor__cajas {
     flex-direction: column;
+  }
+}
+
+#imagenPerros {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #imagenPerros {
+    bottom: 85px;
+  }
+}
+@media (max-width: 575px) {
+  #imagenPerros {
+    bottom: 75px;
   }
 }
 

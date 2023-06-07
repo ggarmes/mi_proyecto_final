@@ -1,89 +1,17 @@
-.color-primario {
-  color: #fec63d;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 11 |     @include flexbox(row, nowrap, center, center);
+ *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\layout\main.scss 11:5  root stylesheet */
 
-.color-secundario {
-  color: black;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 11 \2502      @include flexbox(row, nowrap, center, center);\d\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\layout\\main.scss 11:5  root stylesheet";
 }
-
-.color-terciario {
-  color: gray;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*, ::after, ::before {
-  box-sizing: unset;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-main #imgPerroIndex {
-  margin: 25px;
-  width: 300px;
-}
-@media (max-width: 575px) {
-  main #imgPerroIndex {
-    display: none;
-  }
-}
-main #indexSection .cuadro__inicio {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: solid gray 1px;
-}
-main #indexSection .cuadro__inicio a {
-  text-decoration: none;
-}
-main #indexSection .cuadro__inicio h2 {
-  padding: 20px;
-  font-size: 30px;
-  color: white;
-  background-color: lightcoral;
-  border-radius: 25px 25px 25px 0px;
-}
-@media (max-width: 575px) {
-  main #indexSection .cuadro__inicio h2 {
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
-}
-main #indexSection .cuadro__inicio .textoIndex {
-  font-size: 20px;
-  margin: 20px;
-}
-@media (max-width: 575px) {
-  main #indexSection .cuadro__inicio .textoIndex {
-    font-size: 14px;
-    margin: 10px;
-  }
-}
-@media (min-width: 576px) and (max-width: 1024px) {
-  main #indexSection .cuadro__inicio {
-    flex-direction: column;
-    align-items: center;
-    border-bottom: solid gray 1px;
-  }
-}
-@media (max-width: 575px) {
-  main #indexSection .cuadro__inicio {
-    margin: 20px 0px;
-    flex-direction: column;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */

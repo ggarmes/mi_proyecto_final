@@ -72,14 +72,14 @@ header .nav-link {
 }
 @media (min-width: 576px) and (max-width: 1024px) {
   header .nav-link {
-    font-size: 15px;
-    padding: 2px;
+    font-size: 18px;
+    padding: 6px;
   }
 }
 @media (max-width: 575px) {
   header .nav-link {
-    font-size: 15px;
-    padding: 2px;
+    font-size: 18px;
+    padding: 6px;
   }
 }
 header .navbar-nav {
@@ -101,7 +101,7 @@ header .nav-item {
     padding: 0 10px;
   }
 }
-header .nav-item:hover {
+header .nav-item::hover {
   background-color: #fec63d;
   border-radius: 20px;
 }
@@ -143,18 +143,6 @@ header .active {
   }
 }
 
-.color-primario {
-  color: #fec63d;
-}
-
-.color-secundario {
-  color: black;
-}
-
-.color-terciario {
-  color: gray;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -171,12 +159,38 @@ main {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 575px) {
+  main {
+    flex-direction: column;
+  }
+}
+main div h2 {
+  display: none;
+}
+@media (max-width: 575px) {
+  main div h2 {
+    display: unset;
+    font-size: 40px;
+    text-align: center;
+  }
+}
 main #imgPerroIndex {
   margin: 25px;
   width: 300px;
 }
 @media (max-width: 575px) {
   main #imgPerroIndex {
+    width: 130px;
+    margin-right: 0px;
+  }
+}
+main #indexSection h2 {
+  font-size: 60px;
+  text-align: center;
+  padding-top: 40px;
+}
+@media (max-width: 575px) {
+  main #indexSection h2 {
     display: none;
   }
 }
@@ -193,15 +207,15 @@ main #indexSection .cuadro__inicio {
 main #indexSection .cuadro__inicio a {
   text-decoration: none;
 }
-main #indexSection .cuadro__inicio h2 {
+main #indexSection .cuadro__inicio h3 {
   padding: 20px;
   font-size: 30px;
   color: white;
-  background-color: lightcoral;
+  background-color: #f08080;
   border-radius: 25px 25px 25px 0px;
 }
 @media (max-width: 575px) {
-  main #indexSection .cuadro__inicio h2 {
+  main #indexSection .cuadro__inicio h3 {
     padding: 10px;
     font-size: 18px;
     text-align: center;
@@ -231,12 +245,28 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
+.color-primario {
+  color: #fec63d;
+}
+
+.color-secundario {
+  color: black;
+}
+
+.color-terciario {
+  color: gray;
+}
+
 #footer_rrss {
   background-color: #fec63d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 #footer_rrss img {
   margin: 5px;
@@ -327,8 +357,8 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 #nosotrosSection #quienesSomos #quienesSomosTexto h2 {
-  font-size: 30px;
-  text-align: center;
+  font-size: 40px;
+  text-align: left;
   margin-bottom: 20px;
 }
 #nosotrosSection #quienesSomos #quienesSomosTexto p {
@@ -389,6 +419,10 @@ main #indexSection .cuadro__inicio .textoIndex {
     font-size: 14px;
   }
 }
+#nosotrosSection #misionVisionValor img {
+  width: 120px;
+  margin-bottom: 20px;
+}
 @media (max-width: 575px) {
   #nosotrosSection #misionVisionValor {
     flex-direction: column;
@@ -405,6 +439,10 @@ main #indexSection .cuadro__inicio .textoIndex {
 
 .color-terciario {
   color: gray;
+}
+
+#main__refugios {
+  margin-bottom: 100px;
 }
 
 #listaRefugios {
@@ -438,9 +476,8 @@ main #indexSection .cuadro__inicio .textoIndex {
 #listaRefugios .contenedor__refugios .refugios {
   width: 200px;
   margin: 10px;
-  padding: 5px;
+  padding: 12px;
   background-color: #fec63d;
-  border: 1px solid black;
   border-radius: 10px;
 }
 #listaRefugios .contenedor__refugios .refugios img {
@@ -492,6 +529,7 @@ main #indexSection .cuadro__inicio .textoIndex {
 }
 #mascotasSection img {
   width: 100%;
+  display: none;
 }
 #mascotasSection .contenedor__cajas {
   display: flex;
@@ -504,19 +542,29 @@ main #indexSection .cuadro__inicio .textoIndex {
   text-decoration: none;
 }
 #mascotasSection .contenedor__cajas .mascotas__caja {
+  height: 200px;
   border-radius: 15px;
-  background-color: #fec63d;
+  background-color: #f08080;
+  background: linear-gradient(90deg, rgb(250, 157, 157) 0%, rgb(240, 128, 128) 46%);
   margin: 30px;
   padding: 15px;
 }
 #mascotasSection .contenedor__cajas .mascotas__caja p {
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
   text-align: center;
   font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #mascotasSection .contenedor__cajas .mascotas__caja p {
+    padding: 25px;
+  }
 }
 @media (max-width: 575px) {
   #mascotasSection .contenedor__cajas .mascotas__caja p {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -529,11 +577,29 @@ main #indexSection .cuadro__inicio .textoIndex {
   #mascotasSection .contenedor__cajas .mascotas__caja {
     margin: 15px;
     padding: 10px;
+    height: 150px;
   }
 }
 @media (max-width: 575px) {
   #mascotasSection .contenedor__cajas {
     flex-direction: column;
+  }
+}
+
+#imagenPerros {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #imagenPerros {
+    bottom: 85px;
+  }
+}
+@media (max-width: 575px) {
+  #imagenPerros {
+    bottom: 75px;
   }
 }
 

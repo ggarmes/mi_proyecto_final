@@ -6,6 +6,7 @@
     @include flexbox(column, nowrap, center, center);
     img{
         width: 100%;
+        display: none;
     }
     .contenedor__cajas{
         @include flexbox(row, nowrap, center, center);
@@ -13,16 +14,24 @@
             text-decoration: none;
         }
         .mascotas__caja{
+            height: 200px;
             border-radius: 15px;
-            background-color: $color-primario;
+            background-color: #f08080;
+            background: linear-gradient(90deg, rgba(250,157,157,1) 0%, rgba(240,128,128,1) 46%);
             margin: 30px;
             padding: 15px;
             p{
-                font-size: 30px;
+                font-size: 40px;
+                color: white;
                 text-align: center;
                 font-weight: bold;
+                padding: 30px;
+                text-transform: uppercase;
+                @include mediaquery-tablet(){
+                    padding: 25px;
+                }
                 @include mediaquery-mobile(){
-                    font-size: 20px;
+                    font-size: 30px;
                 }
             }
             @include mediaquery-tablet(){
@@ -32,10 +41,24 @@
             @include mediaquery-mobile(){
                 margin: 15px;
                 padding: 10px;
+                height: 150px;
             }
         }
         @include mediaquery-mobile(){
             flex-direction: column;
         }
+    }
+}
+
+#imagenPerros{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    @include mediaquery-tablet(){
+        bottom: 85px;
+    }
+    @include mediaquery-mobile(){
+        bottom: 75px;
     }
 }
