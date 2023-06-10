@@ -617,37 +617,31 @@ main #indexSection .cuadro__inicio .textoIndex {
   }
 }
 
-.imagen__donacion {
-  width: 80px;
-}
-
-.imagen__construccion {
-  width: 200px;
-}
-
-.caja {
-  background-color: lightcoral;
-  height: auto;
-  aspect-ratio: 1/1; /* para que sea una caja cuadrada -- misma cantidad de alto que tenga de anchi */
-}
-
-.row {
-  flex-wrap: nowrap;
-}
-
-@media (max-width: 575px) {
-  *, ::after, ::before {
-    box-sizing: none;
-  }
-}
 .container-fluid .row {
   flex-wrap: wrap;
 }
+.container-fluid .row h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+}
 @media (max-width: 575px) {
-  .container-fluid .row {
-    max-width: 100%;
+  .container-fluid .row h2 {
+    font-size: 30px;
   }
 }
+@media (max-width: 575px) {
+  .container-fluid .row {
+    max-width: 350px;
+  }
+}
+@media (max-width: 575px) {
+  .container-fluid {
+    max-width: 350px;
+  }
+}
+
 #seccion__login {
   padding-top: 50px;
   width: 500px;
